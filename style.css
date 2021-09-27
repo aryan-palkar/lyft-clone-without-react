@@ -1,0 +1,17 @@
+body{
+    background-color: cadetblue ;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+===================
+NAV BAR
+===================
+*/
+
+.navbar{
+    display: flex;
+    background-color: darkcyan;
+    height: 81px;
+}
