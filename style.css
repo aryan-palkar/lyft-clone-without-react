@@ -1,8 +1,9 @@
-body{
-    background-color: cadetblue ;
+body, h2, h3{
     margin: 0;
     padding: 0;
 }
+
+
 
 /*
 ===================
@@ -12,6 +13,234 @@ NAV BAR
 
 .navbar{
     display: flex;
-    background-color: darkcyan;
     height: 81px;
+    justify-content: space-around;
+    border-bottom: 1px solid rgb(63, 63, 63);
+}
+
+/* .navbar-left{
+    background-color: brown;
+} */
+
+.navbar-right{
+    display: flex;
+    align-items: center;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    border: rgb(63, 63, 63) solid 1px;
+    border-radius: 5px;
+    height: 42px;
+    width: 362px;
+    background-color: white;
+}
+
+.search-text{
+    border: none;
+    width: 320px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.search-button{
+    height: 42px;
+    width: 42px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+    
+}
+.search-text:focus{
+    border: none;
+    outline: none;
+}
+
+/*
+====================
+Content (LAYOUT ONLY) styling is done later
+==================== 
+ */
+.content{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+/*
+=======================
+Part 1 
+=======================
+*/
+.content-section{
+max-width: 1200px;
+display: grid;
+grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.section-1-left{
+    justify-self: end;
+}
+
+.section-1-right{
+    justify-self: start;
+}
+
+.img2{
+    max-height: 648px;
+    max-width: 486px;
+}
+
+.img1{
+    max-height: 345px;
+    max-width: 486px;
+}
+
+.section-1-right {
+display: grid;
+grid-template-columns: repeat(10, 1fr);
+position: relative;
+}
+
+.image-stack__item--top {
+grid-column: 1 / span 8;
+grid-row: 1; 
+padding-top: 75%; 
+z-index: 1;
+}
+
+.image-stack__item--bottom {
+grid-column: 4 / -1;
+grid-row: 1;
+}
+
+.desktop-hidden{
+    display: none;
+}
+
+/* 
+===================
+Part 2 
+===================
+*/
+
+.second{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 150px;
+}
+
+.second-left{
+    justify-self: end;
+}
+
+.second-right{
+    justify-self: start;
+}
+
+.img3{
+    height: 455px;
+    width: 400px;
+    border-top-right-radius: 150px;
+}
+
+
+
+/* 
+====================
+End Of Layout
+====================
+
+
+====================
+Start Of Styles 
+====================
+*/
+
+h2{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 60px;
+    font-weight: 800;
+}
+
+h3{
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 16px;
+}
+
+/* Section 1 */
+.space-40{
+    height: 40px;
+}
+
+.space-16{
+    height: 16px;
+}
+
+.space-48{
+    height: 48px;
+}
+
+.btn {
+    font-family: 'Noto Sans Display', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    padding: 10px 24px 12px 24px;
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    background-color: white;
+    margin-bottom: 16px;
+}
+
+.btn-purple{
+    background-color: #8B37FF;
+    color: white;
+}
+
+.btn-purple:hover{
+    background-color: #6e2cca;
+}
+
+.btn-white{
+    border: solid 1px black;
+}
+
+.btn-white:hover{
+    background-color: rgb(216, 216, 216);
+}
+
+@media screen and (max-width: 1100px) {
+    .content-section{
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    .section-1-left{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .mobile-center{
+        font-size: 48px;
+        text-align: center;
+    }
+
+    .desktop-hidden{
+        display:inline;
+    }
+
+    .section-1-right{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .mobile-hidden{
+        display: none;
+    }
+
 }
