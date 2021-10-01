@@ -88,6 +88,7 @@ grid-template-columns: minmax(0, 1fr) auto;
 
 .img2{
     max-height: 648px;
+    width: 100vw;
     max-width: 486px;
 }
 
